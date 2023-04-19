@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Resources</title>
+    <link rel="shortcut icon" type="x-icon" href="{{ url_for('static', filename= 'icon.png')}}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+</head>
+<style>
+    .cil-lg-4 {
+        width: 30%;
+    }
+
+    .cabn {
+        margin: 20vh 0 0 0vw;
+    }
+
+    .a935 {
+        margin-left: 25vh;
+        margin-bottom: 5vh;
+    }
+</style>
+
+<body>
+
+    <nav class="navbar navbar-dark bg-dark fixed-top ">
+
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{{ url_for('about')}}"><img src="{{ url_for('static', filename= 'icon.png')}}" width="37"
+                    height="32" class="d-inline-block align-text-top"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+                aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sales Prediction</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                        aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="{{ url_for('index')}}">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('form')}}">Prediction</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Documentation
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-dark">
+                                <li><a class="dropdown-item"
+                                        href="https://drive.google.com/file/d/1FBjYS6tp5qeMka01bWzOKWoRFnSlDGUD/view?usp=drivesdk"
+                                        target="_blank" rel="noopener noreferrer">Code</a>
+                                </li>
+                                <li><a class="dropdown-item" href="{{ url_for('graph')}}">Graph</a></li>
+                                <li><a class="dropdown-item" href="https://drive.google.com/file/d/1vyNXlFZU41N1UqirVSTeWxj16b-s-sXR/view?usp=share_link" target="_blank" rel="noopener noreferrer">Report</a></li>
+                                <li><a class="dropdown-item" href="#">Presentation</a></li>
+                            </ul>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('about')}}">About Us</a>
+                        </li>
+                        </li>
+                    </ul>
+                    <form class="d-flex mt-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="row cabn a935">
+        <div class="col-lg-4 ml-4"><a
+                href="https://colab.research.google.com/"
+                target="_blank" rel="noopener noreferrer">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'colab.jpg')}}" alt="">
+            </a>
+            <h2 class="fw-normal">Google Colab</h2>
+            <p>
+                Colab or Colaboratory, allows to write and execute Python in the browser, with zero configuration
+                required and access to GPUs free of charge with easy sharing.
+            </p>
+            <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4"><a
+                href="https://jupyter.org/"
+                target="_blank" rel="noopener noreferrer">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'jupyter.jpg')}}" alt="">
+            </a>
+            <h2 class="fw-normal">Jupyter Lab</h2>
+            <p>
+                JupyterLab is a next-generation web-based user interface for Project Jupyter. JupyterLab allows to work
+                with documents and activities such as Jupyter notebooks, text editors, etc.
+            </p>
+            <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4"><a
+                href="https://www.jetbrains.com/pycharm/"
+                target="_blank" rel="noopener noreferrer">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'pycharm.jpg')}}" alt="">
+            </a>
+            <h2 class="fw-normal">Pycharm</h2>
+            <p>
+                PyCharm is an integrated development environment (IDE) used for programming in Python. It provides code
+                analysis, a graphical debugger, an integrated unit tester, etc.</p>
+            <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+        </div><!-- /.col-lg-4 -->
+    </div>
+
+    <div class="row a935">
+        <div class="col-lg-4"><a
+                href="https://code.visualstudio.com/"
+                target="_blank" rel="noopener noreferrer">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'vscode.jpg')}}" alt="">
+            </a>
+            <h2 class="fw-normal">Visual Studio code</h2>
+            <p>Visual Studio Code is a code editor redefined and optimized for building and debugging modern web and
+                cloud applications. Visual Studio Code is free and available on all platforms.</p>
+            <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4"><a
+                href="https://www.mozilla.org/en-US/firefox/new/"
+                target="_blank" rel="noopener noreferrer">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'fire.jpg')}}" alt="">
+            </a>
+            <h2 class="fw-normal">Firefox</h2>
+            <p>
+                Firefox was created by Mozilla as a faster, more private alternative to browsers like Internet Explorer,
+                and now Chrome.
+            </p>
+            <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4"><a
+                href="https://developer.mozilla.org/en-US/docs/Web/HTML"
+                target="_blank" rel="noopener noreferrer">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'html.png')}}" alt="">
+            </a>
+            <h2 class="fw-normal">HTML</h2>
+            <p>
+                HTML (HyperText Markup Language) is the most basic building block of the Web. It defines the meaning and
+                structure of web content.
+            </p>
+            <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+        </div><!-- /.col-lg-4 -->
+    </div>
+
+    <div class="row a935">
+        <div class="col-lg-4"><a href="https://developer.mozilla.org/en-US/docs/Web/CSS" target="_blank"
+                rel="noopener noreferrer">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'css.jpg')}}" alt="">
+            </a>
+            <h2 class="fw-normal">CSS</h2>
+            <p>
+                Cascading Style Sheets ( CSS) is a stylesheet language used to describe the presentation of a document
+                written in HTML or XML(including XML dialects ).
+            </p>
+            <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4"><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank"
+                rel="noopener noreferrer">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'js.jpg')}}" alt="">
+            </a>
+            <h2 class="fw-normal">Java Script</h2>
+            <p>
+                JavaScript (js) is a light-weight object-oriented programming language which is used by several websites
+                for scripting the webpages.
+            </p>
+            <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+        </div><!-- /.col-lg-4 -->
+
+        <div class="col-lg-4"><a href="" target="_blank" rel="noopener noreferrer">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'other.jpg')}}" alt="">
+            </a>
+            <h2 class="fw-normal">Others</h2>
+            <p>Other resources used in this project</p>
+            <!-- <p><a class="btn btn-secondary" href="#">View details »</a></p> -->
+        </div><!-- /.col-lg-4 -->
+    </div>
+
+    <footer class=" py-5 my-4 col bg-dark">
+
+        <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+            <li class="nav-item text-light"><a href="#" class="nav-link pt-1 mt-1 px-4 text-white change01"><a
+                        class="navbar-brand" href="{{ url_for('about')}}"><img
+                            src="{{ url_for('static', filename= 'icon.png')}}" width="37" height="32"
+                            class="d-inline-block align-text-top"></a></a></li>
+            <li class="nav-item text-light"><a href="{{ url_for('index')}}"
+                    class="nav-link px-2 pt-4 text-white">Home</a></li>
+            <li class="nav-item text-light"><a href="{{ url_for('form')}}"
+                    class="nav-link px-2 pt-4 text-white">Results</a></li>
+            <li class="nav-item text-light"><a href="{{ url_for('resource')}}"
+                    class="nav-link px-2 pt-4 text-white">Resources</a>
+            </li>
+            <li class="nav-item text-light"><a href="{{ url_for('about')}}"
+                    class="nav-link px-2 pt-4 text-white">About</a></li>
+        </ul>
+        <p class="text-center text-light"><a href="https://www.iiitbhopal.ac.in/"
+                class="link-light text-light text-decoration-none" target="_blank" rel="noopener noreferrer">© 2023
+                Group No.09, IIIT Bhopal<br>
+                Created in the partial fulfillment for the award of the degree of<br>
+                BACHELOR OF TECHNOLOGY<br>
+                (Department of Information Technology)
+            </a>
+        </p>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

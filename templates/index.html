@@ -1,0 +1,473 @@
+{% extends 'base.html' %}
+{% block title %}home {% endblock title %}
+{% block body %}
+    
+
+    <!-- carousel slides -->
+    <div id="carouselExampleAutoplaying" class="carousel slide carousel-fade pb-3 mb-5" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename= 'fifth.jpg')}}" class="d-block w-100" height="400px" alt="...">
+            </div>
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename= 'fourth.jpg')}}" class="d-block w-100" height="400px" alt="...">
+            </div>
+            <div class="carousel-item active">
+                <img src="{{ url_for('static', filename= 'third.jpg')}}" class="d-block w-100" height="400px" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename= 'second.jpg')}}" class="d-block w-100" height="400vh" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="{{ url_for('static', filename= 'first.jpg')}}" class="d-block w-100" height="400vh" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true">
+
+            </span>
+            <span class="visually-hidden">
+                Previous
+            </span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true">
+
+            </span>
+            <span class="visually-hidden">
+                Next
+            </span>
+        </button>
+    </div>
+
+    <div class="container marketing my-4">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-lg-4 ml-4">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'eda.jpg')}}" alt="">
+                <h2 class="fw-normal">
+                    Exploratory Data Analysis
+                </h2>
+                <p class="jus123">EDA refers to the process of analyzing data sets in order to understand their main
+                    characteristics and uncover patterns, relationships, and insights.
+                </p>
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#EDA"
+                    aria-controls="offcanvasExample">
+                    View details »
+                </button>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="EDA" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                            Exploratory Data Analysis
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+
+                        <div class="jus123">
+                            It is a process of analyzing and summarizing data sets in order to understand their main
+                            characteristics and uncover patterns, relationships, and insights that may be hidden in the
+                            data. EDA is often used as a first step in the data analysis process, and it is particularly
+                            important in data science and machine learning, where understanding the data is critical for
+                            selecting appropriate modeling techniques and ensuring the accuracy and reliability of the
+                            results.
+
+                            EDA typically involves a variety of techniques, including data visualization, statistical
+                            analysis, and data mining. Data visualization is used to create graphs, charts, and other
+                            visual representations of the data, which can help identify patterns and relationships that
+                            may not be immediately apparent from raw data. Statistical analysis involves calculating
+                            summary statistics, such as means, medians, and standard deviations, and using hypothesis
+                            testing to determine whether observed differences between groups are statistically
+                            significant. Data mining involves searching through the data to identify patterns and
+                            relationships using algorithms and machine learning techniques.
+                            The steps in EDA (Exploratory Data Analysis) generally include the following:
+                            <ol>
+                                <li>
+                                    Data Collection
+                                </li>
+                                The first step is to gather and collect the data from various
+                                sources.
+                                <li>
+                                    Data Cleaning
+                                </li>
+                                The data collected may contain missing values, duplicate entries,
+                                or
+                                outliers. The data cleaning process involves identifying and correcting these issues.
+                                <li>
+                                    Data Preprocessing
+                                </li>
+                                This step involves converting the raw data into a format
+                                that can be
+                                easily analyzed. This may include normalization, scaling, or transforming the data.
+                                <li>
+                                    Data Visualization
+                                </li>
+                                The data is then visualized using various charts, graphs,
+                                and plots to
+                                identify patterns and trends in the data. This helps in understanding the distribution,
+                                frequency, and relationship between the variables.
+                                <li>
+                                    Descriptive Statistics
+                                </li>
+                                Descriptive statistics, such as mean, median, mode,
+                                standard
+                                deviation, and correlation, are calculated to provide insight into the central
+                                tendencies
+                                and variability of the data.
+                                <li>
+                                    Data Exploration
+                                </li>
+                                In this step, various techniques like clustering, association
+                                analysis,
+                                and dimensionality reduction are applied to gain deeper insights into the data and to
+                                identify relationships between variables.
+
+                            </ol>
+
+                            Overall, EDA is an iterative process, and the steps may vary depending on the data and the
+                            problem being analyzed. The goal is to gain a better understanding of the data, identify
+                            patterns and relationships, and gain insights that can inform further analysis and
+                            decision-making.
+                        </div>
+                    </div>
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Exploratory Data Analysis
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/data-manipulation-instructions-in-computer-organization/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Data Manipulation
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/working-with-missing-data-in-pandas/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Missing Values Handling
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/data-visualization-with-python/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Data Visualization
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/dimensionality-reduction/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Dimensionality reduction
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/data-partitioning-in-pyspark/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Data Partitioning
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/introduction-of-database-normalization/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Normalization
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'md.jpg')}}" alt="">
+                <h2 class="fw-normal">
+                    Model Building
+                </h2>
+                <p class="jus123">Model building refers to the process of creating a mathematical representation of a
+                    real-world system
+                    or problem.
+                </p>
+                <p>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#MB"
+                        aria-controls="offcanvasExample">
+                        View details »
+                    </button>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="MB" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                            Model Building
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="jus123">
+                            Model building refers to the process of creating a mathematical representation of a
+                            real-world system or problem. In data science, model building involves developing a
+                            predictive model that can be used to make predictions or classifications based on data.
+
+                            The process of model building typically involves the following steps:
+                            <ol>
+                                <li>
+                                    Data Preprocessing
+                                </li>
+                                The data is cleaned, transformed, and normalized to prepare
+                                it for modeling.
+                                <li>
+                                    Feature Selection
+                                </li>
+                                The relevant features or variables are selected that are most
+                                likely to
+                                be predictive of the outcome.
+                                <li>
+                                    Model Selection
+                                </li>
+                                Various algorithms and techniques are evaluated to determine
+                                the best model
+                                for the data and problem.
+                                <li>
+                                    Model Training
+                                </li>
+                                The selected model is trained on a portion of the data, known as
+                                the
+                                training set, to learn the relationship between the input features and the output
+                                variable.
+                                <li>
+                                    Model Evaluation
+                                </li>
+                                The performance of the model is evaluated using a separate set
+                                of data,
+                                known as the validation set, to determine how well it generalizes to new data.
+                                <li>
+                                    Hyperparameter Tuning
+                                </li>
+                                The model hyperparameters are optimized to improve its
+                                performance.
+
+                            </ol>
+
+                            Model building is a critical part of machine learning and data science, as it enables
+                            predictions and decision-making based on data. The success of the model depends on the
+                            quality of the data, the selection of appropriate features, the choice of algorithm, and the
+                            accuracy of the model evaluation.
+                        </div>
+                    </div>
+                    <div class="dropdown mt-3">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                            Model Building
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/learning-model-building-scikit-learn-python-machine-learning-library/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Model Training
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://machinelearningmastery.com/a-gentle-introduction-to-model-selection-for-machine-learning/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Model Selection
+                                </a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item"
+                                    href="https://www.geeksforgeeks.org/hyperparameter-tuning/"
+                                    target="_blank" rel="noopener noreferrer">
+                                    Hyperparameter Tuning
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                </p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4">
+                <img class="bd-placeholder-img rounded-circle" width="140" height="140" src="{{ url_for('static', filename= 'dp.jpg')}}" alt="">
+                <h2 class="fw-normal">
+                    Deployment
+                </h2>
+                <p class="jus123">
+                    Model deployment refers to the process of taking a trained machine learning model and
+                    making it
+                    available for use in a production environment.
+                </p>
+                <p>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#DP"
+                        aria-controls="offcanvasExample">
+                        View details »
+                    </button>
+
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="DP" aria-labelledby="offcanvasExampleLabel">
+                    <div class="offcanvas-header">
+                        <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                            Deployment
+                        </h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close">
+
+                        </button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div class="jus123">
+                            Model deployment refers to the process of taking a trained machine learning model and making
+                            it
+                            available for use in a production environment.This can involve integrating the model into a
+                            larger software system, deploying it on a cloud-based platform, or embedding it into a
+                            mobile or web application.
+
+                            The process of model building typically involves the following steps:
+                            <ol>
+                                <li>
+                                    Exporting the trained model
+                                </li>
+                                The trained model must be exported from the machine
+                                learning framework in a format that can be used by the deployment environment.
+                                <li>
+                                    Creating a prediction API
+                                </li>
+                                The prediction API provides a way for other software
+                                systems or applications to interact with the model and make predictions.
+                                <li>
+                                    Deploying the model
+                                </li>
+                                The model must be deployed to a production environment,
+                                such as a cloud-based platform or a server, where it can be accessed by the prediction
+                                API.
+                                <li>
+                                    Testing and Monitoring
+                                </li>
+                                Once the model is deployed, it should be tested to
+                                ensure that it is functioning as expected. It should also be monitored on an ongoing
+                                basis to detect any performance issues or changes in data patterns that could affect its
+                                accuracy.
+                            </ol>
+
+                            There are various tools and platforms available for model deployment, such as Amazon
+                            SageMaker, Google Cloud AI Platform, and Microsoft Azure Machine Learning. These platforms
+                            provide a range of features and services to help simplify the process of deploying and
+                            managing machine learning models in a production environment.
+
+
+                            Model building is a critical part of machine learning and data science, as it enables
+                            predictions and decision-making based on data. The success of the model depends on the
+                            quality of the data, the selection of appropriate features, the choice of algorithm, and the
+                            accuracy of the model evaluation.
+                        </div>
+                        <!-- <div class="dropdown mt-3">
+                            <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown">
+                                Model Building
+                            </button>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </div> -->
+                    </div>
+                </div>
+                </p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+
+        <!-- START THE FEATURETTES -->
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette align-items-center">
+            <div class="col-md-7">
+                <a href="{{ url_for('data')}}" class="link-dark text-dark text-decoration-none">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                        Dataset
+                         <span class="text-body-secondary">
+                        </span>
+                    </h2>
+                </a>
+                <p class="lead">
+                    Dataset, used in this project to train ML Model.
+                </p>
+            </div>
+            <div class="col-md-5">
+                <a href="{{ url_for('data')}}">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" src="{{ url_for('static', filename= 'ds.jpg')}}" alt="">
+                    </a>
+                
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette align-items-center">
+            <div class="col-md-7 order-md-2">
+                <a href="{{ url_for('form')}}" class="link-dark text-dark text-decoration-none">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                        Results
+                        <span class="text-body-secondary">
+                        </span>
+                    </h2>
+                    <p class="lead">
+                        Outcomes, predicted by machine learning model in this project.
+                    </p>
+                </a>
+            </div>
+            <div class="col-md-5 order-md-1">
+                <a href="{{ url_for('form')}}">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" src="{{ url_for('static', filename= 'result.jpg')}}" alt="">
+                </a>
+                
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <div class="row featurette d-flex justify-content-center align-items-center">
+            <div class="col-md-7">
+                <a href="{{ url_for('resource')}}" class="link-dark text-dark text-decoration-none">
+                    <h2 class="featurette-heading fw-normal lh-1">
+                        Resources
+                        <span class="text-body-secondary">
+
+                        </span>
+                    </h2>
+                </a>
+                <p class="lead">
+                    <a href="{{ url_for('resource')}}" class="link-dark text-dark text-decoration-none">
+                        Referring to various resources, which are being used in the development of this project.
+                    </a>
+                </p>
+            </div>
+            <div class="col-md-5"><a href="{{ url_for('resource')}}">
+                    <img class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                        height="500" src="{{ url_for('static', filename= 'rsc.jpg')}}" alt="">
+                    </a>
+                <!-- <svg class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto" width="500"
+                    height="500" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: 500x500"
+                    preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <title>Placeholder</title>
+                    <rect width="100%" height="100%" fill="var(--bs-secondary-bg)"></rect><text x="50%" y="50%"
+                        fill="var(--bs-secondary-color)" dy=".3em">500x500</text>
+                </svg> -->
+            </div>
+        </div>
+
+        <hr class="featurette-divider">
+
+        <!-- /END THE FEATURETTES -->
+
+    </div>
+
+
+{% endblock body %}

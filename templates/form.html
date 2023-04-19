@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Form</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/Style.css')}}"> -->
+  <link rel="shortcut icon" type="x-icon" href="{{ url_for('static', filename= 'icon.png')}}">
+
+  <style>
+    body {
+      background: #fdfdfd;
+      background: linear-gradient(to left, #f0f1f4 0%, hsl(180, 12%, 95%) 100%);
+    }
+
+
+    h1 {
+      text-align: center;
+      margin: 8vh auto 0 auto !important;
+    }
+
+    /* #item_weight {
+      margin: 0;
+      padding: 0;
+    } */
+
+    .my-5 {
+      margin-top: 0 !important;
+      margin-bottom: 0 !important;
+    }
+
+    footer a {
+      color: #fff;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    .centerdiv {
+      height: 15vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .centerdiv a {
+      height: 30px;
+      width: 30px;
+      background-color: #f5f6fa;
+      border-radius: 50px;
+      text-align: center;
+      margin: 5px;
+      line-height: 30px;
+      box-shadow: 1px 4px 2px 2px #dcdde1;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .centerdiv a i {
+      transition: all 0.3s linear;
+    }
+
+    .centerdiv a:hover i {
+      transform: scale(1.5);
+      color: #f5f6fa;
+    }
+
+    .centerdiv a:before {
+      content: "";
+      width: 120%;
+      height: 120%;
+      position: absolute;
+      top: 90%;
+      left: -50%;
+      background-color: #eaeced;
+      transform: rotate(60deg);
+    }
+
+    .centerdiv a:hover:before {
+      animation: socialicons 0.8s 1;
+      animation-fill-mode: forwards;
+    }
+
+    @keyframes socialicons {
+
+      0% {
+        top: 90%;
+        left: -50%;
+      }
+
+      50% {
+        top: -60%;
+        left: -10%;
+      }
+
+      100% {
+        top: -10%;
+        left: -10%
+      }
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <nav class="navbar navbar-dark bg-dark fixed-top ">
+
+    <div class="container-fluid">
+        <a class="navbar-brand" href="{{ url_for('about')}}"><img src="{{ url_for('static', filename= 'icon.png')}}" width="37"
+                height="32" class="d-inline-block align-text-top"></a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar"
+            aria-labelledby="offcanvasDarkNavbarLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Sales Prediction</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ url_for('index')}}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('form')}}">Prediction</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                            aria-expanded="false">
+                            Documentation
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-dark">
+                            <li><a class="dropdown-item"
+                                    href="https://drive.google.com/file/d/1FBjYS6tp5qeMka01bWzOKWoRFnSlDGUD/view?usp=drivesdk"
+                                    target="_blank" rel="noopener noreferrer">Code</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{ url_for('graph')}}">Graph</a></li>
+                            <li><a class="dropdown-item" href="https://drive.google.com/file/d/1vyNXlFZU41N1UqirVSTeWxj16b-s-sXR/view?usp=share_link" target="_blank" rel="noopener noreferrer">Report</a></li>
+                            <li><a class="dropdown-item" href="#">Presentation</a></li>
+                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ url_for('about')}}">About Us</a>
+                    </li>
+                    </li>
+                </ul>
+                <form class="d-flex mt-3" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</nav>
+
+  <h1>
+    <!-- <div style="text-align:center"> -->
+    Prediction
+    <!-- </div> -->
+  </h1>
+  <br>
+  <div class="wrapper">
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-md-10 col-sm-6 mx-auto">
+          <form class="" action="/predict" method="post">
+
+            <div class="form-group">
+              <input type="text" name="item_weight" placeholder="Item Weight" id="item_weight" class="form-control"
+                required>
+              <label for="item_weight" class="ph-area"></label>
+
+
+              <div class="form-group">
+                <select class="form-control" name="item_fat_content" required="required">
+                  <option value="" selected>Item Fat Content</option>
+                  <option value="1">Low Fat</option>
+                  <option value="2">Regular</option>
+                  <option value="0">High Fat</option>
+                </select>
+                <!-- <label for="1" class="form_control" aria-required="true">
+                  <input type="radio" value="1" name = "item_fat_content" >Low Fat
+                </label>
+                <label for="2" class="ph_area">
+                  <input type="radio" value="2" name = "item_fat_content" >Regular Fat
+                </label>
+                <input type="radio" value="0" name = "item_fat_content" >
+                <label for="0" class="ph_area">High Fat</label> -->
+              </div>
+
+              <div class="form-group">
+                <input type="text" name="item_visibility" placeholder="Item Visibility" id="item_visibility"
+                  class="form-control" required>
+                <label for="item_visibility" class="ph-area"></label>
+              </div>
+
+
+              <div class="form-group">
+                <select class="form-control chosenn" name="item_type" required="required">
+              </div>
+              <option value="" selected>Item Type</option>
+              <option value="0">Baking Goods</option>
+              <option value="1">Breads</option>
+              <option value="2">Breakfast</option>
+              <option value="3">Canned</option>
+              <option value="4">Dairy</option>
+              <option value="5">Frozen Foods</option>
+              <option value="6">Fruits and Vegetables</option>
+              <option value="7">Hard Drinks</option>
+              <option value="8">Health and Hygiene</option>
+              <option value="9">Household</option>
+              <option value="10">Meat</option>
+              <option value="11">Others</option>
+              <option value="12">Seafood</option>
+              <option value="13">Snack Foods</option>
+              <option value="14">Soft Drinks</option>
+              <option value="15">Starchy Foods</option>
+              </select>
+              </select>
+            </div>
+
+
+
+            <div class="form-group">
+              <input type="text" name="item_mrp" placeholder="Item MRP" id="item_mrp" class="form-control" required>
+              <label for="item_mrp" class="ph-area"></label>
+            </div>
+
+            <div class="form-group">
+              <input type="text" name="outlet_establishment_year" placeholder="Outlet Establishment Year (YYYY)"
+                id="outlet_establishment_year" class="form-control" required>
+              <label for="outlet_establishment_year" class="ph-area"></label>
+            </div>
+
+
+
+            <div class="form-group">
+              <select class="form-control chosen" name="outlet_size" required="required">
+                <option value="" selected>Outlet Size</option>
+                <option value="0">High</option>
+                <option value="1">Medium</option>
+                <option value="2">Small</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <select class="form-control chosen" name="outlet_location_type" required="required">
+                <option value="" selected>Outlet Location Type</option>
+                <option value="0">Tier 1</option>
+                <option value="1">Tier 2</option>
+                <option value="2">Tier 3</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <select class="form-control chosen" name="outlet_type" required="required">
+                <option value="" selected>Outlet Type</option>
+                <option value="0">Grocery Store</option>
+                <option value="1">Supermarket Type1</option>
+                <option value="2">Supermarket Type2</option>
+                <option value="3">Supermarket Type3</option>
+              </select>
+            </div>
+
+
+            <div class="form-group">
+              <input type="submit" class="btn btn-primary" value="Submit">
+              <input type="reset" class="btn btn-danger" value="Reset">
+            </div>
+          </form>
+          <center>{{results}}</center>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer class=" py-5 my-4 col bg-dark">
+
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item text-light"><a href="#" class="nav-link pt-1 mt-1 px-4 text-white change01"><a
+                    class="navbar-brand" href="{{ url_for('about')}}"><img
+                        src="{{ url_for('static', filename= 'icon.png')}}" width="37" height="32"
+                        class="d-inline-block align-text-top"></a></a></li>
+        <li class="nav-item text-light"><a href="{{ url_for('index')}}"
+                class="nav-link px-2 pt-4 text-white">Home</a></li>
+        <li class="nav-item text-light"><a href="{{ url_for('form')}}"
+                class="nav-link px-2 pt-4 text-white">Results</a></li>
+        <li class="nav-item text-light"><a href="{{ url_for('resource')}}"
+                class="nav-link px-2 pt-4 text-white">Resources</a>
+        </li>
+        <li class="nav-item text-light"><a href="{{ url_for('about')}}"
+                class="nav-link px-2 pt-4 text-white">About</a></li>
+    </ul>
+    <p class="text-center text-light"><a href="https://www.iiitbhopal.ac.in/"
+            class="link-light text-light text-decoration-none" target="_blank" rel="noopener noreferrer">© 2023
+            Group No.09, IIIT Bhopal<br>
+            Created in the partial fulfillment for the award of the degree of<br>
+            BACHELOR OF TECHNOLOGY<br>
+            (Department of Information Technology)
+        </a>
+    </p>
+</footer>
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
